@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" Background="Bisque">
+    <DockPanel LastChildFill="True">
+        <ProgressBar DockPanel.Dock="Bottom" Height="25"/>
+        <StackPanel Background="Beige" DockPanel.Dock="Right" Width="200">
+            <Button Content="Parametrs" Margin="20 50" Click="Button_Click"/>
+            <Button Content="Dispatcher" Margin="20 50" Click="Button_Click_1"/>
+            <Button Content="BackGroundWorker" Margin="20 50" Click="Button_Click_2"/>
+        </StackPanel>
+        <TextBlock x:Name="textBlock"/>
+    </DockPanel>
 </Window>
