@@ -16,18 +16,20 @@ using System.Windows.Shapes;
 namespace lab6
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /// Interaction logic for MainWindow.xaml    /// </summary>
     public partial class MainWindow : Window
     {
+        public Integral integral;
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1 window1 = new Window1();
+            if (window1.ShowDialog() != true) return; 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

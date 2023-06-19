@@ -19,9 +19,17 @@ namespace lab6
     /// </summary>
     public partial class Window1 : Window
     {
+        Integral integral;
         public Window1()
         {
             InitializeComponent();
+            integral = new Integral();
+            grid.DataContext = integral;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
         }
     }
 }
