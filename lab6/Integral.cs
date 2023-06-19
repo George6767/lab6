@@ -57,6 +57,7 @@ namespace lab6
         public double B { get => b; set => b = value; }
         public int N { get => n; set => n = value; }
 
+
         public string Error => throw new NotImplementedException();
 
         public override string ToString()

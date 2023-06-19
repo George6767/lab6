@@ -6,6 +6,18 @@
         xmlns:local="clr-namespace:lab6"
         mc:Ignorable="d"
         Title="Data for calculation" Height="250" Width="300" FontSize="20" Background="AntiqueWhite">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={RelativeSource Self},
+                            Path=(Validation.Errors)[0].ErrorContent}"/>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style> 
+    </Window.Resources>
     <Grid x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition/>
