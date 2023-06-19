@@ -19,7 +19,7 @@ namespace lab6
     /// </summary>
     public partial class Window1 : Window
     {
-        Integral integral;
+        public Integral integral;
         public Window1()
         {
             InitializeComponent();
