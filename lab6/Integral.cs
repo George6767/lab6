@@ -9,8 +9,8 @@ namespace lab6
 {
     public class Integral: IDataErrorInfo
     {
-        private double a, b;
-        int n;
+        private double a = 0, b = 9.9;
+        int n = 100;
 
         public Integral()
         {
@@ -52,6 +52,11 @@ namespace lab6
                 return error;
             }
         }
+       
+        public double fx(double x)
+        {
+            return Math.Pow(x, 3);
+        }
 
         public double A { get => a; set => a = value; }
         public double B { get => b; set => b = value; }
@@ -63,6 +68,11 @@ namespace lab6
         public override string ToString()
         {
             return $"a = {A} b = {B} n = {N}";
+        }
+
+        internal object Calculate()
+        {
+            throw new NotImplementedException();
         }
     }
 }
