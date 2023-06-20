@@ -1,18 +1,29 @@
 ﻿<Window x:Class="lab6.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:thrd="clr-namespace:System.ComponentModel;assembly=System"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab6"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="Bisque">
+    <Window.Resources>
+        <thrd:BackgroundWorker x:Key="worker"
+                               DoWork="BackgroundWorker_DoWork"
+                               ProgressChanged="BackgroundWorker_ProgressChanged"
+                               RunWorkerCompleted="BackgroundWorker_RunWorkerCompleted"
+                               WorkerReportsProgress="True"
+                               />
+    </Window.Resources>
     <DockPanel LastChildFill="True">
-        <ProgressBar DockPanel.Dock="Bottom" Height="25"/>
+        <ProgressBar x:Name="pBar" DockPanel.Dock="Bottom" Height="25"/>
         <StackPanel Background="Beige" DockPanel.Dock="Right" Width="200">
-            <Button Content="Parametrs" Margin="20 50" Click="Button_Click"/>
-            <Button Content="Dispatcher" Margin="20 50" Click="Button_Click_1"/>
-            <Button Content="BackGroundWorker" Margin="20 50" Click="Button_Click_2"/>
+            <Button x:Name="___No_Name_" Content="Parametrs" Margin="20 50" Click="Button_Click"/>
+            <Button x:Name="buttonD" Content="Dispatcher" Margin="20 50" Click="Button_Click_1"/>
+            <Button x:Name="buttonW" Content="BackGroundWorker" Margin="20 50" Click="Button_Click_2"/>
         </StackPanel>
+        <ScrollViewer>
         <TextBlock x:Name="textBlock"/>
+        </ScrollViewer>
     </DockPanel>
 </Window>
